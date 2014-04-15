@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		983A35F118FDBC2300419108 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 983A35F018FDBC2300419108 /* LoginViewController.m */; };
+		984F8EEC18F528B700946544 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F8EEB18F528B700946544 /* Foundation.framework */; };
+		984F8EEE18F528B700946544 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F8EED18F528B700946544 /* CoreGraphics.framework */; };
+		984F8EF018F528B700946544 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F8EEF18F528B700946544 /* UIKit.framework */; };
+		984F8EF618F528B700946544 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 984F8EF418F528B700946544 /* InfoPlist.strings */; };
+		984F8EF818F528B700946544 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 984F8EF718F528B700946544 /* main.m */; };
+		984F8EFC18F528B700946544 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 984F8EFB18F528B700946544 /* AppDelegate.m */; };
+		984F8EFF18F528B700946544 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984F8EFD18F528B700946544 /* Main.storyboard */; };
+		984F8F0218F528B700946544 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 984F8F0118F528B700946544 /* ViewController.m */; };
+		984F8F0418F528B700946544 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984F8F0318F528B700946544 /* Images.xcassets */; };
+		984F8F0B18F528B700946544 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F8F0A18F528B700946544 /* XCTest.framework */; };
+		984F8F0C18F528B700946544 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F8EEB18F528B700946544 /* Foundation.framework */; };
+		984F8F0D18F528B700946544 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F8EEF18F528B700946544 /* UIKit.framework */; };
+		984F8F1518F528B700946544 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 984F8F1318F528B700946544 /* InfoPlist.strings */; };
+		984F8F1718F528B700946544 /* CetinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 984F8F1618F528B700946544 /* CetinTests.m */; };
+		984F8F2418F52A6B00946544 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 984F8F2318F52A6B00946544 /* logo.png */; };
+		984F8F2618F52D7500946544 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 984F8F2518F52D7500946544 /* login.png */; };
+		984F8F2818F5343700946544 /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 984F8F2718F5343700946544 /* signup.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		984F8F0E18F528B700946544 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 984F8EE018F528B700946544 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 984F8EE718F528B700946544;
+			remoteInfo = Cetin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		983A35EF18FDBC2300419108 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		983A35F018FDBC2300419108 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		984F8EE818F528B700946544 /* Cetin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cetin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		984F8EEB18F528B700946544 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		984F8EED18F528B700946544 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		984F8EEF18F528B700946544 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		984F8EF318F528B700946544 /* Cetin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cetin-Info.plist"; sourceTree = "<group>"; };
+		984F8EF518F528B700946544 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		984F8EF718F528B700946544 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		984F8EF918F528B700946544 /* Cetin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cetin-Prefix.pch"; sourceTree = "<group>"; };
+		984F8EFA18F528B700946544 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		984F8EFB18F528B700946544 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		984F8EFE18F528B700946544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		984F8F0018F528B700946544 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		984F8F0118F528B700946544 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		984F8F0318F528B700946544 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		984F8F0918F528B700946544 /* CetinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CetinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		984F8F0A18F528B700946544 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		984F8F1218F528B700946544 /* CetinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CetinTests-Info.plist"; sourceTree = "<group>"; };
+		984F8F1418F528B700946544 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		984F8F1618F528B700946544 /* CetinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CetinTests.m; sourceTree = "<group>"; };
+		984F8F2318F52A6B00946544 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Cetin/img/logo.png; sourceTree = "<group>"; };
+		984F8F2518F52D7500946544 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login.png; path = Cetin/img/login.png; sourceTree = "<group>"; };
+		984F8F2718F5343700946544 /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signup.png; path = Cetin/img/signup.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		984F8EE518F528B700946544 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984F8EEE18F528B700946544 /* CoreGraphics.framework in Frameworks */,
+				984F8EF018F528B700946544 /* UIKit.framework in Frameworks */,
+				984F8EEC18F528B700946544 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		984F8F0618F528B700946544 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984F8F0B18F528B700946544 /* XCTest.framework in Frameworks */,
+				984F8F0D18F528B700946544 /* UIKit.framework in Frameworks */,
+				984F8F0C18F528B700946544 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		984F8EDF18F528B700946544 = {
+			isa = PBXGroup;
+			children = (
+				984F8F2018F529A800946544 /* img */,
+				984F8EF118F528B700946544 /* Cetin */,
+				984F8F1018F528B700946544 /* CetinTests */,
+				984F8EEA18F528B700946544 /* Frameworks */,
+				984F8EE918F528B700946544 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		984F8EE918F528B700946544 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				984F8EE818F528B700946544 /* Cetin.app */,
+				984F8F0918F528B700946544 /* CetinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		984F8EEA18F528B700946544 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				984F8EEB18F528B700946544 /* Foundation.framework */,
+				984F8EED18F528B700946544 /* CoreGraphics.framework */,
+				984F8EEF18F528B700946544 /* UIKit.framework */,
+				984F8F0A18F528B700946544 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		984F8EF118F528B700946544 /* Cetin */ = {
+			isa = PBXGroup;
+			children = (
+				983A35EF18FDBC2300419108 /* LoginViewController.h */,
+				983A35F018FDBC2300419108 /* LoginViewController.m */,
+				984F8EFA18F528B700946544 /* AppDelegate.h */,
+				984F8EFB18F528B700946544 /* AppDelegate.m */,
+				984F8EFD18F528B700946544 /* Main.storyboard */,
+				984F8F0018F528B700946544 /* ViewController.h */,
+				984F8F0118F528B700946544 /* ViewController.m */,
+				984F8F0318F528B700946544 /* Images.xcassets */,
+				984F8EF218F528B700946544 /* Supporting Files */,
+			);
+			path = Cetin;
+			sourceTree = "<group>";
+		};
+		984F8EF218F528B700946544 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				984F8EF318F528B700946544 /* Cetin-Info.plist */,
+				984F8EF418F528B700946544 /* InfoPlist.strings */,
+				984F8EF718F528B700946544 /* main.m */,
+				984F8EF918F528B700946544 /* Cetin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		984F8F1018F528B700946544 /* CetinTests */ = {
+			isa = PBXGroup;
+			children = (
+				984F8F1618F528B700946544 /* CetinTests.m */,
+				984F8F1118F528B700946544 /* Supporting Files */,
+			);
+			path = CetinTests;
+			sourceTree = "<group>";
+		};
+		984F8F1118F528B700946544 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				984F8F1218F528B700946544 /* CetinTests-Info.plist */,
+				984F8F1318F528B700946544 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		984F8F2018F529A800946544 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				984F8F2718F5343700946544 /* signup.png */,
+				984F8F2518F52D7500946544 /* login.png */,
+				984F8F2318F52A6B00946544 /* logo.png */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		984F8EE718F528B700946544 /* Cetin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 984F8F1A18F528B700946544 /* Build configuration list for PBXNativeTarget "Cetin" */;
+			buildPhases = (
+				984F8EE418F528B700946544 /* Sources */,
+				984F8EE518F528B700946544 /* Frameworks */,
+				984F8EE618F528B700946544 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cetin;
+			productName = Cetin;
+			productReference = 984F8EE818F528B700946544 /* Cetin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		984F8F0818F528B700946544 /* CetinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 984F8F1D18F528B700946544 /* Build configuration list for PBXNativeTarget "CetinTests" */;
+			buildPhases = (
+				984F8F0518F528B700946544 /* Sources */,
+				984F8F0618F528B700946544 /* Frameworks */,
+				984F8F0718F528B700946544 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				984F8F0F18F528B700946544 /* PBXTargetDependency */,
+			);
+			name = CetinTests;
+			productName = CetinTests;
+			productReference = 984F8F0918F528B700946544 /* CetinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		984F8EE018F528B700946544 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Turushan Aktay";
+				TargetAttributes = {
+					984F8F0818F528B700946544 = {
+						TestTargetID = 984F8EE718F528B700946544;
+					};
+				};
+			};
+			buildConfigurationList = 984F8EE318F528B700946544 /* Build configuration list for PBXProject "Cetin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 984F8EDF18F528B700946544;
+			productRefGroup = 984F8EE918F528B700946544 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				984F8EE718F528B700946544 /* Cetin */,
+				984F8F0818F528B700946544 /* CetinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		984F8EE618F528B700946544 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984F8F2418F52A6B00946544 /* logo.png in Resources */,
+				984F8F2618F52D7500946544 /* login.png in Resources */,
+				984F8F0418F528B700946544 /* Images.xcassets in Resources */,
+				984F8EF618F528B700946544 /* InfoPlist.strings in Resources */,
+				984F8EFF18F528B700946544 /* Main.storyboard in Resources */,
+				984F8F2818F5343700946544 /* signup.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		984F8F0718F528B700946544 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984F8F1518F528B700946544 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		984F8EE418F528B700946544 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				983A35F118FDBC2300419108 /* LoginViewController.m in Sources */,
+				984F8F0218F528B700946544 /* ViewController.m in Sources */,
+				984F8EFC18F528B700946544 /* AppDelegate.m in Sources */,
+				984F8EF818F528B700946544 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		984F8F0518F528B700946544 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984F8F1718F528B700946544 /* CetinTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		984F8F0F18F528B700946544 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 984F8EE718F528B700946544 /* Cetin */;
+			targetProxy = 984F8F0E18F528B700946544 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		984F8EF418F528B700946544 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				984F8EF518F528B700946544 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		984F8EFD18F528B700946544 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				984F8EFE18F528B700946544 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		984F8F1318F528B700946544 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				984F8F1418F528B700946544 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		984F8F1818F528B700946544 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		984F8F1918F528B700946544 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		984F8F1B18F528B700946544 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cetin/Cetin-Prefix.pch";
+				INFOPLIST_FILE = "Cetin/Cetin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		984F8F1C18F528B700946544 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cetin/Cetin-Prefix.pch";
+				INFOPLIST_FILE = "Cetin/Cetin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		984F8F1E18F528B700946544 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Cetin.app/Cetin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cetin/Cetin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CetinTests/CetinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		984F8F1F18F528B700946544 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Cetin.app/Cetin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cetin/Cetin-Prefix.pch";
+				INFOPLIST_FILE = "CetinTests/CetinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		984F8EE318F528B700946544 /* Build configuration list for PBXProject "Cetin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				984F8F1818F528B700946544 /* Debug */,
+				984F8F1918F528B700946544 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		984F8F1A18F528B700946544 /* Build configuration list for PBXNativeTarget "Cetin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				984F8F1B18F528B700946544 /* Debug */,
+				984F8F1C18F528B700946544 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		984F8F1D18F528B700946544 /* Build configuration list for PBXNativeTarget "CetinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				984F8F1E18F528B700946544 /* Debug */,
+				984F8F1F18F528B700946544 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 984F8EE018F528B700946544 /* Project object */;
+}
