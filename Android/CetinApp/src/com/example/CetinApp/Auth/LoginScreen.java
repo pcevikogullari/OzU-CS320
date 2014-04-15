@@ -89,7 +89,42 @@ public class LoginScreen extends Activity {
         protected String doInBackground(String... params) {
 
             String convertedText = "";
+            String convertedText2 = "";
+            String convertedText3 = "";
+            try {
+                URL url = new URL("http://cevikogullari.com/system/call.php?comp=auth&subcomp=usrform&email="+email+"&pass="+password+"&"+Math.random());
+                URLConnection urlConnection = url.openConnection();
+                InputStream in = new BufferedInputStream(urlConnection.getInputStream());
 
+                convertedText = convertStreamToString(in).trim();
+                Log.v("dataText1-->",convertedText.trim().equals("4")+"");
+
+                if(convertedText != "0"){
+                    URL url2 = new URL("http://cevikogullari.com/system/call.php/?comp=auth&subcomp=sesstart&usrid="+convertedText+"&"+Math.random());
+                    URLConnection urlConnection2 = url2.openConnection();
+                    InputStream in2 = new BufferedInputStream(urlConnection2.getInputStream());
+
+                    convertedText2 = convertStreamToString(in2).trim();
+
+                    Log.v("dataText2-->",convertedText+" - "+convertedText2);
+                    in2.close();
+                }
+                /*
+                if(convertedText2 != "0"){
+                    URL url3 = new URL("http://cevikogullari.com/system/call.php/?comp=auth&subcomp=sesreq");
+                    URLConnection urlConnection3 = url3.openConnection();
+                    InputStream in3 = new BufferedInputStream(urlConnection3.getInputStream());
+
+                    convertedText3 = convertStreamToString(in3).trim();
+
+                    Log.v("dataText2-->",convertedText+" - "+convertedText2 + " - "+convertedText3);
+                    in3.close();
+                } */
+
+
+            }catch(Exception e){
+                Log.e("convertedText",e.toString());
+            }
             return convertedText;
         }
 
