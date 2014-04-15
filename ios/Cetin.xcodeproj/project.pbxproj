@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		983A35F118FDBC2300419108 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 983A35F018FDBC2300419108 /* LoginViewController.m */; };
 		984F8EEC18F528B700946544 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F8EEB18F528B700946544 /* Foundation.framework */; };
 		984F8EEE18F528B700946544 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F8EED18F528B700946544 /* CoreGraphics.framework */; };
 		984F8EF018F528B700946544 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F8EEF18F528B700946544 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		983A35EF18FDBC2300419108 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		983A35F018FDBC2300419108 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		984F8EE818F528B700946544 /* Cetin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cetin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		984F8EEB18F528B700946544 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		984F8EED18F528B700946544 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,8 @@
 		984F8EF118F528B700946544 /* Cetin */ = {
 			isa = PBXGroup;
 			children = (
+				983A35EF18FDBC2300419108 /* LoginViewController.h */,
+				983A35F018FDBC2300419108 /* LoginViewController.m */,
 				984F8EFA18F528B700946544 /* AppDelegate.h */,
 				984F8EFB18F528B700946544 /* AppDelegate.m */,
 				984F8EFD18F528B700946544 /* Main.storyboard */,
@@ -269,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983A35F118FDBC2300419108 /* LoginViewController.m in Sources */,
 				984F8F0218F528B700946544 /* ViewController.m in Sources */,
 				984F8EFC18F528B700946544 /* AppDelegate.m in Sources */,
 				984F8EF818F528B700946544 /* main.m in Sources */,
@@ -476,6 +482,7 @@
 				984F8F1C18F528B700946544 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		984F8F1D18F528B700946544 /* Build configuration list for PBXNativeTarget "CetinTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +491,7 @@
 				984F8F1F18F528B700946544 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
