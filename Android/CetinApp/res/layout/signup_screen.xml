@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+        >
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:hint="Username"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/username" android:layout_gravity="center"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:hint="Email"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/email" android:layout_gravity="center"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:hint="Password"
+                android:layout_marginBottom="5dp"
+                android:inputType="textPassword"
+                android:id="@+id/password" android:layout_gravity="center"/>
+
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:id="@+id/submitButton" android:layout_gravity="right|center_vertical"/>
+
+    </LinearLayout>
+    <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar" android:layout_gravity="center_horizontal|bottom"/>
+</FrameLayout>
