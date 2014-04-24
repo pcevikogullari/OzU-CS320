@@ -1,0 +1,63 @@
+CetinApp
+
+............................ Connector = /system/call.php?comp=connector ............................
+
+Requires
+IMessage = /system/call.php?comp=connector&subcomp=send&userid=...&crid=...&msg=...
+IMessageReq = /system/call.php?comp=connector&subcomp=retr&crid=...&lastrecid=... -> IMessageJSON
+IConnectionAlive = /system/call.php?comp=connector&subcomp=connalive -> IConnectionAliveRes
+IUserLogin = /system/call.php?comp=connector&subcomp=login&email=...&pass=... -> IUserData
+ISQL = /system/call.php?comp=connector&subcomp=sql&sql=... -> IResultJSON
+
+Provides
+IResultJSON : JSON of returned query
+IMessageJSON : JSON (to GUI)
+IConnectionAliveRes : 1/0
+IUserData
+
+............................ Sender = /system/call.php?comp=send ............................
+/*
+* 1) Receive 'IMessageForm'
+* 2) Send 'ISessionReq' to Authenticator
+* 3) Receive IUserData
+* 4) Combine 'IMessageForm' and 'IUserData'
+* 5) Send to Connector as 'IMessage'
+*/
+Requires
+IMessageForm = /system/call.php?comp=sender&subcomp=sendmsg&crid=...&msg=...
+_IUserData = /system/call.php?comp=sender&subcomp=userdata&userid=...
+
+Provides
+ISessionReq (to Authenticator)
+IMessage (to Sender)
+
+............................ Listener = /system/call.php?comp=listener ............................
+
+/*
+* 1) Receive chatroom id (crid) and lastrecid
+* 2) Send connector 'IMessageReq' -> crid & lastrecid
+* 3) "select * from user_message where chatroomid=crid and id>lastrecid"
+* 4) Send returned 'IMessageJSON' to GUI component
+*/
+
+Requires
+IMessageJSON (interface ismini sallayın burada biraz hile hurdaya giricez)
+= /system/call.php?comp=listener&subcomp=retr&crid=...&lastrecid=...
+
+Provides
+IMessageReq (to Connector)
+IMessageJSON (to GUI) (burası da hileli, bu göndermicek gui ye connector gönderecek)
+
+............................ Authenticator = /system/call.php?comp=auth ............................
+
+Requires
+IUserForm = /system/call.php?comp=auth&subcomp=usrform&email=...&pass=... -> IUserLogin
+IUserData = /system/call.php?comp=auth&subcomp=sesstart&usrid=...
+ISessionReq = /system/call.php?comp=auth&subcomp=sesreq -> IUserData
+(no interface) = /system/call.php?comp=auth&subcomp=sesdestroy (logout)
+
+Provides
+IUserLogin (to connector)
+IUserData
+
+
