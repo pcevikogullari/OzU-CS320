@@ -1,0 +1,6 @@
+[13-Apr-2014 17:24:24 America/Chicago] PHP Warning:  Unknown: The session id is too long or contains illegal characters, valid characters are a-z, A-Z, 0-9 and '-,' in Unknown on line 0
+[13-Apr-2014 17:24:24 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[13-Apr-2014 17:24:25 America/Chicago] PHP Warning:  session_write_close(): The session id is too long or contains illegal characters, valid characters are a-z, A-Z, 0-9 and '-,' in /home2/turushan/public_html/cevikogullari.com/web/php/includes.php on line 8
+[13-Apr-2014 17:24:25 America/Chicago] PHP Warning:  session_write_close(): Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in /home2/turushan/public_html/cevikogullari.com/web/php/includes.php on line 8
+[13-Apr-2014 17:24:25 America/Chicago] PHP Warning:  Unknown: The session id is too long or contains illegal characters, valid characters are a-z, A-Z, 0-9 and '-,' in Unknown on line 0
+[13-Apr-2014 17:24:25 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
