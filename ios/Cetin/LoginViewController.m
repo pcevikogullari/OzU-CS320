@@ -7,22 +7,44 @@
 //
 
 #import "LoginViewController.h"
+#import "ChatTableViewController.h"
+#import "ChatTableViewCell.h"
 
-@interface LoginViewController ()
-
+@interface LoginViewController () <UITextFieldDelegate>
 @end
 
 @implementation LoginViewController
-@synthesize loginButton, username, password, passwordLabel, usernameLabel, viewChats;
+@synthesize loginButton, username, password, passwordLabel, usernameLabel, viewChats, showChatrooms, chatNames, dict;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.chatNames = [[NSMutableArray alloc] init];
     }
     return self;
 }
+
+- (IBAction)getChatrooms:(id)sender {
+    NSString *allChatroomk = [[NSString alloc] initWithFormat:@"http://bit.ly/1kajjjN"];
+    NSString *allChatrooms = [[NSString alloc] initWithFormat:allChatroomk];
+    //http://bit.ly/1kajjjN
+    //http://cevikogullari.com/system/call.php?comp=connector&subcomp=sql&sql=[\"SELECT\",\"*\",\"FROM\",\"chatroom\"]"
+
+    NSString *returnedxD = [self stringWithUrl:[NSURL URLWithString:allChatrooms]];
+    NSLog(allChatrooms);
+    NSLog(returnedxD);
+    
+    NSData *jsonData = [returnedxD dataUsingEncoding:NSUTF8StringEncoding];
+    //NSData *jsonData = [NSData dataWithContentsOfURL:allChatrooms];
+    NSError *e;
+    dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&e];
+    NSLog([dict description]);
+    chatNames = [dict valueForKey:@"name"];
+
+}
+
 - (IBAction)pushLogin:(id)sender {
     NSString *user = [[NSString alloc] initWithFormat:@"%@", username.text];
     NSString *pw = [[NSString alloc] initWithFormat:@"%@", password.text];
@@ -32,25 +54,27 @@
     NSString *returnedID = [self stringWithUrl:[NSURL URLWithString:login1st]];
 
     NSLog(returnedID);
+    NSLog(@"hello");
     
     //NSString *returnedIDtrimmed = [returnedID stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
-    NSString *login2nd = [[NSString alloc] initWithFormat:@"http:cevikogullari.com/system/call.php/?comp=auth&subcomp=sesstart&usrid=%@&%d", returnedID , arc4random() % 30];
+    NSString *login2nd = [[NSString alloc] initWithFormat:@"http://cevikogullari.com/system/call.php/?comp=auth&subcomp=sesstart&usrid=%@&%d", returnedID , arc4random() % 30];
     
     NSString *returnedID2 = [self stringWithUrl:[NSURL URLWithString:login2nd]];
-    
+    NSString *invalidCheck = @"0";
     NSLog(returnedID);
     NSLog(returnedID2);
-
-    if ([returnedID isEqualToString:returnedID2]) {
-        [loginButton setHidden:YES];
-        [username setHidden:YES];
-        [password setHidden:YES];
-        [usernameLabel setHidden:YES];
-        [passwordLabel setHidden:YES];
-        [viewChats setHidden:NO];
-        [viewChats setTitle:[[NSString alloc] initWithFormat:@"Hoşgeldin, %@", user] forState:UIControlStateNormal];
-        
+    [self.view endEditing:YES];
+    if (![returnedID isEqualToString:invalidCheck]) {
+        if ([returnedID isEqualToString:returnedID2]) {
+            [loginButton setHidden:YES];
+            [username setHidden:YES];
+            [password setHidden:YES];
+            [usernameLabel setHidden:YES];
+            [passwordLabel setHidden:YES];
+            [viewChats setHidden:NO];
+            [viewChats setTitle:[[NSString alloc] initWithFormat:@"Hoşgeldin, %@", user] forState:UIControlStateNormal];
+        }
     }
     
     }
@@ -104,5 +128,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"chatpush"]) {
+        ChatTableViewController *controller = segue.destinationViewController;
+        controller.chatNames = self.chatNames;
+    }
+}
 
 @end

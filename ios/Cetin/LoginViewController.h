@@ -15,5 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *viewChats;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
+@property (weak, nonatomic) IBOutlet UIButton *showChatrooms;
+@property (nonatomic, strong) NSMutableArray *chatNames;
+@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) NSDictionary *dict;
 
 @end

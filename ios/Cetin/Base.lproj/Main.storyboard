@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="turushan.aktay@ozu.edu.tr" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0iE-OY-Tvs">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="turushan.aktay@ozu.edu.tr" borderStyle="roundedRect" placeholder="turushan.aktay@ozu.edu.tr" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0iE-OY-Tvs">
                                 <rect key="frame" x="112" y="45" width="188" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -29,7 +29,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="*********" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fcB-6t-K4y">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="*********" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fcB-6t-K4y">
                                 <rect key="frame" x="112" y="83" width="188" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -60,7 +60,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="VDc-Nc-chO" kind="push" id="3ND-u7-aR0"/>
+                                    <action selector="getChatrooms:" destination="O6j-sJ-JiJ" eventType="touchUpInside" id="TJ6-KM-WFT"/>
+                                    <segue destination="DMB-qb-Hou" kind="push" identifier="chatpush" id="xl5-kp-7Wb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -71,6 +72,7 @@
                         <outlet property="loginButton" destination="2cy-a1-Cdh" id="I1m-2r-L9l"/>
                         <outlet property="password" destination="fcB-6t-K4y" id="Ecy-1d-8ym"/>
                         <outlet property="passwordLabel" destination="NJT-D3-GCX" id="JdQ-9X-Wsz"/>
+                        <outlet property="showChatrooms" destination="hIH-Vu-iqj" id="aW3-Ez-rM0"/>
                         <outlet property="username" destination="0iE-OY-Tvs" id="RCQ-cq-XjE"/>
                         <outlet property="usernameLabel" destination="6UG-HK-0VW" id="8n7-4D-Wg8"/>
                         <outlet property="viewChats" destination="hIH-Vu-iqj" id="KKU-e2-wSZ"/>
@@ -79,6 +81,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUE-JM-S6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1193" y="-110"/>
+        </scene>
+        <!--Chat Table View Controller - Chats-->
+        <scene sceneID="S4s-Sg-x5e">
+            <objects>
+                <tableViewController id="DMB-qb-Hou" customClass="ChatTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="gRc-AG-Jzt">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell" rowHeight="60" id="7cV-59-kwe" customClass="ChatTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7cV-59-kwe" id="koU-bd-xJI">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cr-9P-IT7">
+                                            <rect key="frame" x="20" y="19" width="280" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="chatName" destination="5Cr-9P-IT7" id="YwK-OC-9bR"/>
+                                    <segue destination="leB-O5-5AM" kind="push" id="A2i-qS-tqv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DMB-qb-Hou" id="bX1-mD-Zkt"/>
+                            <outlet property="delegate" destination="DMB-qb-Hou" id="tqF-gZ-fYV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chats" id="4uH-ij-l6m">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hj7-tp-cvC"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xS3-po-D1j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="-110"/>
+        </scene>
+        <!--Detail View Controller - Detail-->
+        <scene sceneID="XUC-TO-PYm">
+            <objects>
+                <viewController id="leB-O5-5AM" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2dw-gE-el6"/>
+                        <viewControllerLayoutGuide type="bottom" id="BhG-wl-AgE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vsn-Pa-2a6">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="asdf" translatesAutoresizingMaskIntoConstraints="NO" id="kDl-sM-ab0">
+                                <rect key="frame" x="0.0" y="50" width="320" height="219"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="k1e-4A-fFn"/>
+                    <connections>
+                        <outlet property="chatLog" destination="kDl-sM-ab0" id="xxC-gV-chU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4eR-eZ-Ynq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2023" y="-103"/>
         </scene>
         <!--View Controller - Signup-->
         <scene sceneID="gga-Bd-OKc">
@@ -181,129 +258,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="711" y="268"/>
-        </scene>
-        <!--View Controller - begüm.tokuyucu@ozu.edu.tr-->
-        <scene sceneID="S5G-FX-MIk">
-            <objects>
-                <viewController id="jAc-Dy-6be" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SnR-py-dML"/>
-                        <viewControllerLayoutGuide type="bottom" id="65P-8f-BV9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kkU-0a-SrT">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="write something" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g0T-mX-JUU">
-                                <rect key="frame" x="20" y="366" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOg-0q-Phh">
-                                <rect key="frame" x="26" y="20" width="274" height="319"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Begum : Selam?
-Turus : Selam
-
-Begum : Selam?
-Turus : Selam
-
-Begum : Selam?
-Turus : Selam
-
-Begum : Selam?
-Turus : Selam
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="begüm.tokuyucu@ozu.edu.tr" id="Lvx-Wg-j8K"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n7N-wr-sHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2097" y="-110"/>
-        </scene>
-        <!--Table View Controller - Chats-->
-        <scene sceneID="R36-BP-zAW">
-            <objects>
-                <tableViewController id="VDc-Nc-chO" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" id="OIb-1f-Slh">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="Gkz-EL-XNu">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="97" id="R5q-iX-yDP">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R5q-iX-yDP" id="cEB-I8-Jx2">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="96"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="begum.tokuyucu@ozu.edu.tr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxn-IY-LCi">
-                                                    <rect key="frame" x="20" y="13" width="267" height="23"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selam naber?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="198" translatesAutoresizingMaskIntoConstraints="NO" id="yuG-Yv-frs">
-                                                    <rect key="frame" x="20" y="44" width="198" height="39"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="jAc-Dy-6be" kind="push" id="5Fv-EL-x0Q"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="97" id="5qm-Wg-mWK">
-                                        <rect key="frame" x="0.0" y="97" width="320" height="97"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5qm-Wg-mWK" id="aJU-z9-0nl">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="96"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pamir.cevikogullari@ozu.edu.tr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8j-py-Sx9">
-                                                    <rect key="frame" x="20" y="13" width="267" height="23"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS tarafı bitti mi?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="198" translatesAutoresizingMaskIntoConstraints="NO" id="vbD-hk-t1X">
-                                                    <rect key="frame" x="20" y="44" width="198" height="39"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="VDc-Nc-chO" id="zi4-OX-7DN"/>
-                            <outlet property="delegate" destination="VDc-Nc-chO" id="F9g-SX-a0t"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Chats" id="lDP-bG-Tcr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5aW-nf-h4C"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UUa-BL-ppU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1636" y="-110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cr2-7z-k9N">
