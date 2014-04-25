@@ -16,7 +16,7 @@
 @end
 
 @implementation ChatTableViewController
-@synthesize dict, chatNames;
+@synthesize dict, chatNames, index;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -135,7 +135,8 @@
         
          NSLog([dict description]);
          controller.dict = self.dict;
-        
+        index = indexPath;
+        controller.index = self.index;
         //NSLog([self.tableView indexPathForSelectedRow]);
         //controller.chatLog = self.chatLog;
         

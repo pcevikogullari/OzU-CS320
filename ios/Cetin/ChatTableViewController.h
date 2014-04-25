@@ -12,4 +12,5 @@
 @interface ChatTableViewController : UITableViewController
 @property (nonatomic, strong) NSMutableArray *chatNames;
 @property (nonatomic, strong) NSDictionary *dict;
+@property (nonatomic, strong) NSIndexPath *index;
 @end
