@@ -109,7 +109,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="chatName" destination="5Cr-9P-IT7" id="YwK-OC-9bR"/>
-                                    <segue destination="leB-O5-5AM" kind="push" id="A2i-qS-tqv"/>
+                                    <segue destination="leB-O5-5AM" kind="push" identifier="detpush" id="A2i-qS-tqv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

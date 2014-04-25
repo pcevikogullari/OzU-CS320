@@ -16,7 +16,7 @@
 @end
 
 @implementation ChatTableViewController
-
+@synthesize dict, chatNames;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -51,7 +51,6 @@
     
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -78,53 +77,71 @@
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+- (NSString *)stringWithUrl:(NSURL *)url
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url
+                                                cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                            timeoutInterval:30];
+    
+    // Fetch the JSON response
+    
+    NSData *urlData;
+    NSURLResponse *response;
+    NSError *error;
+    
+    // Make synchronous request
+    urlData = [NSURLConnection sendSynchronousRequest:urlRequest
+                                    returningResponse:&response
+                                                error:&error];
+    
+    
+    
+    // Construct a String around the Data from the response
+    
+    return [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
+    
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+
 {
-}
-*/
+    if ([segue.identifier isEqualToString:@"detpush"]) {
+         NSString *log;
+         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+         NSLog(@"asdad");
+         ChatTableViewController *controller = segue.destinationViewController;
+         NSLog(@"hello");
+         NSLog(@"%d", indexPath.row);
+         if(indexPath.row == 0) {
+             log = [[NSString alloc] initWithFormat:@"http://bit.ly/1puZ5a3"];
+         } else if (indexPath.row == 1) {
+             log = [[NSString alloc] initWithFormat:@"http://bit.ly/QJE7EE"];
+         } else if (indexPath.row == 2) {
+             log = [[NSString alloc] initWithFormat:@"http://bit.ly/1nt3453"];
+         } else if (indexPath.row == 3) {
+         log = [[NSString alloc] initWithFormat:@"http://bit.ly/1tIw1eK"];
+         }
+        
+        // NSLog(@"hello mf");
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+         NSString *returnedLog = [self stringWithUrl:[NSURL URLWithString:log]];
+         NSData *jsonData = [returnedLog dataUsingEncoding:NSUTF8StringEncoding];
+         NSError *e;
+         dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&e];
+        
+         NSLog([dict description]);
+         controller.dict = self.dict;
+        
+        //NSLog([self.tableView indexPathForSelectedRow]);
+        //controller.chatLog = self.chatLog;
+        
+    }
+    
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
+

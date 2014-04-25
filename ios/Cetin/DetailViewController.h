@@ -10,5 +10,5 @@
 
 @interface DetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *chatLog;
-
+@property (nonatomic, strong) NSDictionary *dict;
 @end

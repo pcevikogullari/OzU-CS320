@@ -13,7 +13,7 @@
 @end
 
 @implementation DetailViewController
-@synthesize chatLog;
+@synthesize chatLog, dict;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString *log = [[NSString alloc] initWithFormat:@"%@", [dict valueForKey:@"message"]];
+    [chatLog setText:log];
     // Do any additional setup after loading the view.
 }
 
