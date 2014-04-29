@@ -8,6 +8,35 @@ class Game {
     shooter = new Shooter();
   }
 
+  void play() {
+    background(255, 255, 255);
+
+    if (gameMode == 0) { // start menu
+      startScreen();
+    }
+    else if (gameMode == 1) { // game play
+      shooter.play();
+      gamePlay();
+    }
+    else if (gameMode == 2) { // level completed
+      leveCompleted();
+    }
+    else if (gameMode == 3) { // store
+    }
+    else if (gameMode == 4) {
+      death();
+    }
+  }
+
+  void startScreen() {
+    textAlign(CENTER);
+    fill(0);
+    text("click to start", width/2, height/2);
+    noFill();
+    if (mousePressed) {
+      gameMode = 1;
+    }
+  }
 
   void leveCompleted() {
     textAlign(CENTER);
@@ -50,5 +79,3 @@ class Game {
   }
 
 }
-
-
